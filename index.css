@@ -118,7 +118,7 @@ button:active {
 @media (max-width: 768px) {
   p {
     top: 130px;
-    left: 10%;
+    left: 8%;
     font-size: 20px;
   }
 
