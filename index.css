@@ -117,8 +117,8 @@ button:active {
 /* Responsive design */
 @media (max-width: 768px) {
   p {
-    top: 130px;
-    left: 8%;
+    top: 135px;
+    left: 12%;
     font-size: 20px;
   }
 
