@@ -1,36 +1,37 @@
 const inputBoxValue = document.querySelector(".input-box");
 
 function calculateValue(input) {
-    if (input === 'DEL') {
-        inputBoxValue.value = inputBoxValue.value.slice(0, -1);
-    } else {
-        inputBoxValue.value += input;
+    if (input === "+" || input === "*" || input === "/" || input === ".") {
+        if (inputBoxValue.value === "" || "*+/.".includes(inputBoxValue.value.slice(-1))) {
+            return;
+        }
     }
+    if (input === "x") {
+        return;
+    }
+    inputBoxValue.value += input;
 }
 
 function resetValue() {
-    inputBoxValue.value = '';
+    inputBoxValue.value = "";
 }
 
 function calculateTotal() {
-    let expression = inputBoxValue.value.replace(/x/g, '*');
+    let expression = inputBoxValue.value.replace(/x/g, "*");
     try {
         inputBoxValue.value = eval(expression);
     } catch {
-        inputBoxValue.value = 'Error';
+        inputBoxValue.value = "Error";
     }
 }
 
+function delButton() {
+    inputBoxValue.value = inputBoxValue.value.toString().slice(0, -1);
+}
 
-// if user enter a (*, /, ., )
-function calculateValue(input) {
-    if (input === "+" || input === "*" || input === "/") {
-      if (
-        inputBoxValue.value === "" ||
-        "*+./".includes(inputBoxValue.value.slice(-1))
-      ) {
-        return;
-      }
-    }
-    inputBoxValue.value += input;
-  }
+document.querySelectorAll(".input-button").forEach(button => {
+    button.addEventListener("click", () => calculateValue(button.innerText));
+});
+document.querySelector(".del-btn").addEventListener("click", delButton);
+document.querySelector(".reset-btn").addEventListener("click", resetValue);
+document.querySelector(".equal-btn").addEventListener("click", calculateTotal);
