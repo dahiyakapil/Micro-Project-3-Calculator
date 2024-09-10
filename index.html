@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <p> calc </p>
+    <div class="calculator">
+        <input class="input-box" readonly>
+        <div class="display-input">
+            <div class="keys">
+                <button onclick="calculateValue('7')">7</button>
+                <button onclick="calculateValue('8')">8</button>
+                <button onclick="calculateValue('9')">9</button>
+                <button onclick="calculateValue('DEL')" class="del-btn">DEL</button>
+                <button onclick="calculateValue('4')">4</button>
+                <button onclick="calculateValue('5')">5</button>
+                <button onclick="calculateValue('6')">6</button>
+                <button onclick="calculateValue('+')" class="operator-btn">+</button>
+                <button onclick="calculateValue('1')">1</button>
+                <button onclick="calculateValue('2')">2</button>
+                <button onclick="calculateValue('3')">3</button>
+                <button onclick="calculateValue('-')" class="operator-btn">-</button>
+                <button onclick="calculateValue('.')">.</button>
+                <button onclick="calculateValue('0')">0</button>
+                <button onclick="calculateValue('/')">/</button>
+                <button onclick="calculateValue('x')" class="operator-btn">x</button>
+            </div>
+            <div class="addon-btn">
+                <button onclick="resetValue()" class="reset-btn">RESET</button>
+                <button onclick="calculateTotal()" class="equal-btn">=</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="./index.js"></script>
+</body>
+
+</html>

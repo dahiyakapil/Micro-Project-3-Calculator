@@ -1,0 +1,153 @@
+body {
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: rgba(59, 70, 100, 1);
+  position: relative;
+}
+
+p {
+  font-family: inter;
+  position: absolute;
+  top: 36.5px;
+  left: 552px;
+  bottom: 210;
+  color: white;
+  font-family: Inter;
+  font-size: 28px;
+  font-weight: 800;
+  line-height: 33.89px;
+  text-align: left;
+}
+
+/* main div */
+.calculator {
+  font-family: Arial, sans-serif;
+  border-radius: 12px;
+  max-width: 500px;
+}
+
+/* 1st div inside main */
+.input-box {
+  max-width: 442.3px;
+  height: 90px;
+  font-family: Segoe UI;
+  font-size: 50px;
+  font-weight: 700;
+  line-height: 73.15px;
+  text-align: right;
+  border: none;
+  border-radius: 12px;
+  background-color: rgba(24, 31, 50, 1);
+  color: rgba(255, 255, 255, 1);
+  padding: 15px;
+}
+
+
+
+/* 2nd div  */
+.display-input {
+  margin-top: 15px;
+  border-radius: 12px 12px 0 0;
+}
+
+/* keys inside 2nd div */
+.keys {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 15px;
+  padding: 25px 25px 15px 25px;
+  background-color: rgba(37, 45, 68, 1);
+  border-radius: 12px 12px 0 0;
+}
+
+.del-btn {
+  background: rgba(100, 114, 153, 1);
+  color: rgba(255, 255, 255, 1);
+  font: inter;
+  font-size: 20px;
+  align-items: center;
+}
+
+button {
+  border-radius: 5px;
+  background-color: rgba(234, 227, 219, 1);
+  color: rgba(59, 70, 100, 1);
+  font-size: 48px;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 12px;
+  border: none;
+}
+
+
+button:active {
+  transform: scale(1); /* Use transform for scaling */
+  box-shadow: inset 2px 2px 2px rgba(0, 0, 0, 0.2); /* Add slight shadow with transparency */
+  transition: transform 0.2s ease, box-shadow 0.2s ease; /* Smooth transition effect */
+}
+
+.addon-btn {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  padding: 0 25px 25px 25px;
+  gap: 10px;
+  background-color: rgba(37, 45, 68, 1);
+  border-radius: 0 0 12px 12px;
+}
+
+.reset-btn {
+  background: rgba(100, 114, 153, 1);
+  color: rgba(255, 255, 255, 1);
+  font-size: 23.05px;
+  font: Inter;
+}
+
+.equal-btn {
+  background: rgba(209, 63, 48, 1);
+  color: rgba(255, 255, 255, 1);
+  font-family: Inter;
+}
+
+
+/* Responsive design */
+@media (max-width: 768px) {
+  p {
+    top: 210px;
+    left: 8%;
+    font-size: 20px;
+  }
+
+  .calculator {
+    width: 90%;
+    margin: 30px;
+  }
+
+  .input-box {
+    width: 90%;
+    font-size: 40px;
+    height: 70px;
+  }
+
+  button {
+    font-size: 36px;
+  }
+}
+
+@media (max-width: 480px) {
+  p {
+    font-size: 16px;
+  }
+
+  .input-box {
+    font-size: 30px;
+    height: 60px;
+  }
+
+  button {
+    font-size: 28px;
+  }
+}
