@@ -18,7 +18,7 @@ function resetValue() {
 function calculateTotal() {
   let expression = inputBoxValue.value.replace(/x/g, "*");
   try {
-    inputBoxValue.value = eval(expression);
+    inputBoxValue.value = eval(expression).toFixed(2);
   } catch {
     inputBoxValue.value = "Error";
   }
