@@ -44,6 +44,7 @@ p {
   background-color: rgba(24, 31, 50, 1);
   color: rgba(255, 255, 255, 1);
   padding: 15px;
+  outline: none;
 }
 
 
@@ -116,7 +117,7 @@ button:active {
 /* Responsive design */
 @media (max-width: 768px) {
   p {
-    top: 210px;
+    top: 180px;
     left: 8%;
     font-size: 20px;
   }
